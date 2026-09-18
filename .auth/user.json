@@ -1,0 +1,29 @@
+{
+  "cookies": [
+    {
+      "name": "PHPSESSID",
+      "value": "d60388e688fcc5f3bea4faeddf94f496",
+      "domain": "staging.enminvithaigal.in",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://staging.enminvithaigal.in",
+      "localStorage": [
+        {
+          "name": "auth",
+          "value": "{\"accessToken\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODk3MjA5MjEsImlzcyI6ImdyZWVuZGVsaS5lbm1pbnZpdGhhaWdhbC5pbiIsIm5iZiI6MTc4OTcyMDkyMSwiZXhwIjoxNzg5NzQ5NzIxLCJkYXRhIjp7InVzZXJJZCI6IjEiLCJyb2xlIjoiYWRtaW4ifX0.ApNtZyOH8CGW9GeQbIym0njx3l0-CIxlb_-w6IGgVfd5KEliSKfEsNFug6nl0iQoOavmnZC7dYvDpabaw9AYkQ\",\"refreshToken\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3ODk3MjA5MjEsImlzcyI6ImdyZWVuZGVsaS5lbm1pbnZpdGhhaWdhbC5pbiIsIm5iZiI6MTc4OTcyMDkyMSwiZXhwIjoxNzkwMDY2NTIxLCJkYXRhIjp7InVzZXJJZCI6IjEiLCJyb2xlIjoiYWRtaW4ifX0.slgxk_ahqTB3KnnanerSOc2M_bxnCXN_gYYbGxQfBUTWIdrBYSYTlSVYK95gmFyoz0JVIDTyaVK_Y1VZA1CW1g\",\"adminID\":\"1\",\"adminName\":\"sridhanesh\"}"
+        },
+        {
+          "name": "notificationToastShown",
+          "value": "true"
+        }
+      ]
+    }
+  ]
+}

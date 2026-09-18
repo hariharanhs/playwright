@@ -1,0 +1,121 @@
+{
+   "loginCredentials": {
+      "url": "https://staging.enminvithaigal.in/greendeli",
+      "email": "sridhaneshmp@rajasri.net",
+      "password": "Pass@123"
+   },
+   "positiveTests": [
+      {
+         "restaurantName": "Hotel Saravana Bhavan",
+         "mobile": "9876543210",
+         "email": "hsb@example.com",
+         "password": "Partner@123",
+         "dealPercentage": "12",
+         "fssai": "12345678901234",
+         "gstin": "33AAAAA1111A1Z1",
+         "availability": "Open",
+         "openingTime": "14:45",
+         "closingTime": "22:30",
+         "imagePath": "./image/restaurant.jpg",
+         "expectedMessage": "restaurant added successfully"
+      }
+   ],
+   "errors": {
+      "restaurantName": "Restaurant Name is required.",
+      "email": "Email is required.",
+      "isRestaurantAvailable": "Is Restaurant Available ? is required.",
+      "fssaiNumber": "FSSAI Number is required.",
+      "openingTime": "Opening Time is required.",
+      "mobileNumber": "Mobile Number is required.",
+      "password": "Password is required.",
+      "restaurantImage": "Restaurant's Image is required.",
+      "dealPercentage": "Deal Percentage is required.",
+      "gstinNumber": "GSTIN Number is required.",
+      "closingTime": "Closing Time is required."
+   },
+   "invalidInputs": {
+      "restaurantName": {
+         "spaces": "     ",
+         "specialChars": "$#%#%#%%",
+         "expectedError": "Please enter a valid restaurant name"
+      },
+      "mobileNumber": {
+         "spaces": "      ",
+         "short": "1234",
+         "long": "1234567890000000",
+         "numbersOnlyError": "Only numbers are allowed in mobile number",
+         "exactDigitsError": "Mobile number must be exactly 10 digits"
+      },
+      "email": {
+         "missingDomain": "vijayalakshmim",
+         "missingUser": "@rajasri.net",
+         "spaces": "             ",
+         "expectedError": "Please enter a valid email address"
+      },
+      "password": {
+         "spaces": "     ",
+         "short": "12345",
+         "expectedError": "Password must contain"
+      },
+      "dealPercentage": {
+         "spaces": "      ",
+         "negative": "-10",
+         "invalidChars": "@$#$#%gsgfrg",
+         "expectedError": "Percentage must be a number between 0 and 100"
+      },
+      "fssaiNumber": {
+         "spaces": "      ",
+         "invalidFormat": "@$%hbgdhh12432",
+         "expectedError": "Invalid FSSAI format"
+      },
+      "gstinNumber": {
+         "spaces": "   ",
+         "invalidFormat": "@$%hbgdhh12432",
+         "expectedError": "Invalid GSTIN format"
+      }
+   },
+   "editPartner": {
+      "searchTarget": "Hotel Saravana Bhavan",
+      "updatedName": "Hotel Saravana Bhavan veg",
+      "updatedMobile": "8807116552",
+      "updatedEmail": "sample@rajasri.net",
+      "updatedPercentage": "10",
+      "updatedFSSAI": "12345678900987",
+      "updatedGSTIN": "24AAAGM0289C1ZP",
+      "expectedSuccessMessage": "Restaurant updated successfully"
+   },
+   "deletePartner": {
+      "targetPartner": "Hotel Saravana Bhavan veg",
+      "expectedSuccessMessage": "Restaurant deleted successfully"
+   },
+   "existingPartnerDuplicateCheck": {
+      "initial": {
+         "restaurantName": "Hotel Saravana Bhavan veg",
+         "mobile": "8807116552",
+         "email": "sample@rajasri.net",
+         "password": "Partner@123",
+         "dealPercentage": "10",
+         "fssai": "12345678900987",
+         "gstin": "24AAAGM0289C1ZP",
+         "availability": "Open",
+         "openingTime": "14:45",
+         "closingTime": "22:30",
+         "imagePath": "./image/restaurant.jpg"
+      },
+      "fssaiGstinStep": {
+         "expectedError": "Duplicate entry found. FSSAI or GSTIN already exists",
+         "newFssai": "12345678904569",
+         "newGstin": "33AAAAA1111A1Z2"
+      },
+      "restaurantNameStep": {
+         "expectedError": "Duplicate entry found. Restaurant name with same address already exists",
+         "newName": "Hotel New Bhavan"
+      },
+      "emailMobileStep": {
+         "expectedError": "Duplicate entry found. Email or Mobile Number already exists",
+         "newEmail": "sample101@example.com",
+         "newMobile": "9876543552"
+      },
+      "expectedFinalMessage": "Restaurant added successfully"
+   }
+}

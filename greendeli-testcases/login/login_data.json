@@ -1,0 +1,51 @@
+{
+  "positiveTests": [
+    {
+      "testName": "Login with EMail",
+       "htmlElementEmail":"email",
+       "htmlEmleentPassword":"",
+      "email": "sridhaneshmp@rajasri.net",
+      "password": "Pass@123",
+      "expectedUrlSubstring": "https://staging.enminvithaigal.in/greendeli/dashboard",
+      "expectedErrorMessage": "Login successful"
+    }
+  ],
+  "negativeTests": [
+    {
+      "testName": "Invalid password shows error message",
+      "email": "sridhaneshmp@rajasri.net",
+      "password": "18Rajasri@",
+      "expectedErrorMessage": "Invalid credentials! Please try again."
+    },
+    {
+      "testName": "Empty space show error message",
+      "email": "   ",
+      "password": "   ",
+      "expectedErrorMessage": "Enter a valid email address"
+    },
+    {
+      "testName": "Invalid Email shows error message",
+      "email": "@rajasri.net",
+      "password": "Pass@123",
+      "expectedErrorMessage": "Enter a valid email address"
+    },
+    {
+      "testName": "Email empty field shows error message",
+      "email": "",
+      "password": "Pass@123",
+      "expectedErrorMessage": "Enter a valid email address"
+    },
+    {
+      "testName": "Password empty field shows error message",
+      "email": "sridhaneshmp@rajasri.net",
+      "password": "",
+      "expectedErrorMessage": "Enter a valid password"
+    },
+    {
+      "testName": "Caps letter in password",
+      "email": "sridhaneshmp@rajasri.net",
+      "password": "PASS@123",
+      "expectedErrorMessage": "Enter a valid password"
+    }
+  ]
+}
