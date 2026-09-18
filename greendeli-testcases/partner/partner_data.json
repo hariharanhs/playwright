@@ -18,6 +18,9 @@
          "closingTime": "22:30",
          "imagePath": "./image/restaurant.jpg",
          "expectedMessage": "restaurant added successfully"
+      },
+      {
+         "restaurantName":""
       }
    ],
    "errors": {
