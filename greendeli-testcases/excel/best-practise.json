@@ -1,0 +1,60 @@
+{
+  "emailRules": [
+    {
+      "testId": "EM_01",
+      "rule": "Empty Check",
+      "inputValue": "",
+      "expectedError": "Email is required"
+    },
+    {
+      "testId": "EM_02",
+      "rule": "Missing @ Symbol",
+      "inputValue": "john.company.com",
+      "expectedError": "Please enter a valid email address"
+    },
+    {
+      "testId": "EM_03",
+      "rule": "Missing Domain",
+      "inputValue": "john@",
+      "expectedError": "Please enter a valid email address"
+    },
+    {
+      "testId": "EM_04",
+      "rule": "Valid Email",
+      "inputValue": "john.doe@intrahub.com",
+      "expectedError": null
+    }
+  ],
+  "passwordRules": [
+    {
+      "testId": "PW_01",
+      "rule": "Empty Check",
+      "inputValue": "",
+      "expectedError": "Password is required"
+    },
+    {
+      "testId": "PW_02",
+      "rule": "Min Length Check (< 8 chars)",
+      "inputValue": "Pass1!",
+      "expectedError": "Password must be at least 8 characters long"
+    },
+    {
+      "testId": "PW_03",
+      "rule": "Missing Special Character",
+      "inputValue": "Password123",
+      "expectedError": "Password must contain at least one special character"
+    },
+    {
+      "testId": "PW_04",
+      "rule": "Missing Number",
+      "inputValue": "Password!",
+      "expectedError": "Password must contain at least one number"
+    },
+    {
+      "testId": "PW_05",
+      "rule": "Valid Password",
+      "inputValue": "SecurePass123!",
+      "expectedError": null
+    }
+  ]
+}

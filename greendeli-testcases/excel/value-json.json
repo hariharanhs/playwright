@@ -1,0 +1,66 @@
+[
+  {
+    "testId": "TC_001",
+    "testName": "Create Employee with all valid details",
+    "testType": "positive",
+    "formData": {
+      "employeeCode": "EMP1001",
+      "employeeName": "John Doe",
+      "officialEmail": "john.doe@company.com",
+      "mobileNumber": "9876543210",
+      "gender": "Male"
+    },
+    "expectedResult": {
+      "success": true,
+      "message": "Employee created successfully"
+    }
+  },
+  {
+    "testId": "TC_002",
+    "testName": "Validation Error - Invalid Email Format",
+    "testType": "negative",
+    "formData": {
+      "employeeCode": "EMP1002",
+      "employeeName": "Alex Mercer",
+      "officialEmail": "invalid-email-format",
+      "mobileNumber": "9876543210",
+      "gender": "Male"
+    },
+    "expectedResult": {
+      "success": false,
+      "errorMessage": "Please enter a valid email address"
+    }
+  },
+  {
+    "testId": "TC_003",
+    "testName": "Validation Error - Missing Mandatory Fields",
+    "testType": "negative",
+    "formData": {
+      "employeeCode": "",
+      "employeeName": "",
+      "officialEmail": "test@company.com",
+      "mobileNumber": "9876543210",
+      "gender": "Male"
+    },
+    "expectedResult": {
+      "success": false,
+      "errorMessage": "Employee name is required"
+    }
+  },
+  {
+    "testId": "TC_004",
+    "testName": "Validation Error - Invalid Mobile Number",
+    "testType": "negative",
+    "formData": {
+      "employeeCode": "EMP1004",
+      "employeeName": "Sara Smith",
+      "officialEmail": "sara@company.com",
+      "mobileNumber": "12345",
+      "gender": "Female"
+    },
+    "expectedResult": {
+      "success": false,
+      "errorMessage": "Mobile number must be 10 digits"
+    }
+  }
+]
