@@ -1,0 +1,100 @@
+{
+  "emailRules": [
+    {
+      "testId": "EM_01",
+      "rule": "Empty Check",
+      "inputValue": "",
+      "expectedError": "Email is required"
+    },
+    {
+      "testId": "EM_02",
+      "rule": "Missing @ Symbol",
+      "inputValue": "john.company.com",
+      "expectedError": "Please enter a valid email address"
+    },
+    {
+      "testId": "EM_03",
+      "rule": "Missing Domain",
+      "inputValue": "john@",
+      "expectedError": "Please enter a valid email address"
+    },
+    {
+      "testId": "EM_04",
+      "rule": "Valid Email",
+      "inputValue": "john.doe@intrahub.com",
+      "expectedError": null
+    }
+  ],
+  "passwordRules": [
+    {
+      "testId": "PW_01",
+      "rule": "Empty Check",
+      "inputValue": "",
+      "expectedError": "Password is required"
+    },
+    {
+      "testId": "PW_02",
+      "rule": "Min Length Check (< 8 chars)",
+      "inputValue": "Pass1!",
+      "expectedError": "Password must be at least 8 characters long"
+    },
+    {
+      "testId": "PW_03",
+      "rule": "Missing Special Character",
+      "inputValue": "Password123",
+      "expectedError": "Password must contain at least one special character"
+    },
+    {
+      "testId": "PW_04",
+      "rule": "Missing Number",
+      "inputValue": "Password!",
+      "expectedError": "Password must contain at least one number"
+    },
+    {
+      "testId": "PW_05",
+      "rule": "Valid Password",
+      "inputValue": "SecurePass123!",
+      "expectedError": null
+    }
+  ],
+  "formSubmission": {
+    "testId": "E2E_SUBMIT_01",
+    "description": "Submit complete form with valid data after all field validations pass",
+    "formData": {
+      "basicInfo": {
+        "employeeCode": "EMP1024",
+        "employeeName": "Rahul Sharma",
+        "officialEmail": "john.doe@intrahub.com",
+        "mobileNumber": "9876543210",
+        "password": "SecurePass123!"
+      },
+      "personalInfo": {
+        "fatherName": "Suresh Sharma",
+        "motherName": "Anita Sharma",
+        "gender": "Male",
+        "maritalStatus": "Single",
+        "emergencyNumber": "9123456789",
+        "personalEmail": "rahul.personal@gmail.com",
+        "dob": "1996-08-15"
+      },
+      "roleAndReporting": {
+        "role": "Software Engineer",
+        "isAdmin": true,
+        "doj": "2024-01-10",
+        "careerStartDate": "2022-06-01",
+        "designation": "QA Automation Engineer",
+        "reportingAuthority": "Manager Name",
+        "internalInitial": "RS",
+        "loginType": "Email"
+      },
+      "addressInfo": {
+        "residentialAddress": "No 12, Main Street, Chennai, Tamil Nadu",
+        "permanentAddress": "No 12, Main Street, Chennai, Tamil Nadu"
+      }
+    },
+    "expectedOutcome": {
+      "toastMessage": "Employee created successfully",
+      "redirectUrl": "/dashboard/employee-list"
+    }
+  }
+}

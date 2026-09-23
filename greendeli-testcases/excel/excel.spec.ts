@@ -10,7 +10,7 @@ test('Read Excel and retrieve specific row for validation', async ({ page }) => 
   console.log('--- Total Rows Fetched ---:', allRows.length);
 
   // 2. CALLING METHOD 2: Get particular row by search text
-  const targetText = '1.1.1';
+  const targetText = '3.1.1';
   const matchedRow = getRowByText(excelFilePath, targetText);
 
   console.log(`--- Matched Row for "${targetText}" ---:`, matchedRow);
