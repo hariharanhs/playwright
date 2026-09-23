@@ -1,0 +1,19 @@
+import * as XLSX from 'xlsx';
+
+/**
+ * Reads an Excel file and returns data as an array of JSON objects
+ * @param filePath - Path to your .xlsx file
+ * @param sheetName - (Optional) Name of the sheet. Defaults to first sheet.
+ */
+export function readExcelFile(filePath: string, sheetName?: string) {
+  // 1. Excel workbook file-ah read panrom
+  const workbook = XLSX.readFile(filePath);
+
+  // 2. Sheet name specify pannelana, first sheet-ah select pannum
+  const targetSheetName = sheetName || workbook.SheetNames[0];
+  const worksheet = workbook.Sheets[targetSheetName];
+
+  // 3. Sheet data-va JSON array-va convert panrom
+  const jsonData = XLSX.utils.sheet_to_json(worksheet);
+  return jsonData;
+}
