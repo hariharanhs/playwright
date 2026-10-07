@@ -3,6 +3,7 @@
     {
       "testId": "EM_01",
       "rule": "Empty Check",
+      "tag":"@positive",
       "inputValue": "",
       "expectedError": "Email is required"
     },

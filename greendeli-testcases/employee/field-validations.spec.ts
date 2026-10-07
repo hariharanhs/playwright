@@ -50,3 +50,9 @@ test.describe('Employee Form - Field Level Validations', () => {
   });
 
 });
+
+const testValue = "    "
+
+if(testValue.trim() == ""){
+  
+}
